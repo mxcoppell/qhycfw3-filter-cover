@@ -11,17 +11,17 @@ Please note, this design is for unmounted filters with thickness of 3mm. - For e
 Currently, the following CFW3 filter wheels are supported. The square filter version is not available in current version.
 
 - _QHYCFW3-S-SR 7x31mm_
-- QHYCFW3-S-SR 6x36mm
-- QHYCFW3-S-US 7x31mm
-- QHYCFW3-S-US 6x36mm
-- QHYCFW3-M-SR 8x31mm
-- QHYCFW3-M-SR 7x36mm
-- QHYCFW3-M-SR 5x50mm
-- QHYCFW3-M-US 8x31mm
-- QHYCFW3-M-US 7x36mm
-- QHYCFW3-M-US 5x50mm
-- QHYCFW3-L    7x50mm
-- QHYCFW3-XL   9x50mm
+- _QHYCFW3-S-SR 6x36mm_
+- _QHYCFW3-S-US 7x31mm_
+- _QHYCFW3-S-US 6x36mm_
+- _QHYCFW3-M-SR 8x31mm_
+- _QHYCFW3-M-SR 7x36mm_
+- _QHYCFW3-M-SR 5x50mm_
+- _QHYCFW3-M-US 8x31mm_
+- _QHYCFW3-M-US 7x36mm_
+- _QHYCFW3-M-US 5x50mm_
+- _QHYCFW3-L    7x50mm_
+- _QHYCFW3-XL   9x50mm_
 
 # Filter Cover Styles
 
@@ -39,18 +39,18 @@ SSC - Sunkened Screw Caps
 
 | Filter Model  | No S / No SSC | No S / Yes SSC | Yes S / No SSC | Yes S / Yes SSC |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| QHYCFW3-S-SR 7x31mm  |   |   |   |   |
-| QHYCFW3-S-SR 6x36mm  |   |   |   |   |
-| QHYCFW3-S-US 7x31mm  |   |   |   |   |
-| QHYCFW3-S-US 6x36mm  |   |   |   |   |
-| QHYCFW3-M-SR 8x31mm  |   |   |   |   |
-| QHYCFW3-M-SR 7x36mm  |   |   |   |   |
-| QHYCFW3-M-SR 5x50mm  |   |   |   |   |
-| QHYCFW3-M-US 8x31mm  |   |   |   |   |
-| QHYCFW3-M-US 7x36mm  |   |   |   |   |
-| QHYCFW3-M-US 5x50mm  |   |   |   |   |
-| QHYCFW3-L    7x50mm  |   |   |   |   |
-| QHYCFW3-XL   9x50mm  |   |   |   |   |
+| QHYCFW3-S-SR 7x31mm  | [download](https://github.com/mxcoppell/qhycfw3-filter-cover/blob/main/stl/%230%20%3D%20QHYCFW3-S-SR-7x31mm-no-separator-no-sunk-screw-cap.stl)  | [download](https://github.com/mxcoppell/qhycfw3-filter-cover/blob/main/stl/%230%20%3D%20QHYCFW3-S-SR-7x31mm-no-separator-yes-sunk-screw-cap.stl)  | [download](https://github.com/mxcoppell/qhycfw3-filter-cover/blob/main/stl/%230%20%3D%20QHYCFW3-S-SR-7x31mm-yes-separator-no-sunk-screw-cap.stl)  | [download](https://github.com/mxcoppell/qhycfw3-filter-cover/blob/main/stl/%230%20%3D%20QHYCFW3-S-SR-7x31mm-yes-separator-yes-sunk-screw-cap.stl)  |
+| QHYCFW3-S-SR 6x36mm  | [download]()  | [download]()  | [download]()  | [download]()  |
+| QHYCFW3-S-US 7x31mm  | [download]()  | [download]()  | [download]()  | [download]()  |
+| QHYCFW3-S-US 6x36mm  | [download]()  | [download]()  | [download]()  | [download]()  |
+| QHYCFW3-M-SR 8x31mm  | [download]()  | [download]()  | [download]()  | [download]()  |
+| QHYCFW3-M-SR 7x36mm  | [download]()  | [download]()  | [download]()  | [download]()  |
+| QHYCFW3-M-SR 5x50mm  | [download]()  | [download]()  | [download]()  | [download]()  |
+| QHYCFW3-M-US 8x31mm  | [download]()  | [download]()  | [download]()  | [download]()  |
+| QHYCFW3-M-US 7x36mm  | [download]()  | [download]()  | [download]()  | [download]()  |
+| QHYCFW3-M-US 5x50mm  | [download]()  | [download]()  | [download]()  | [download]()  |
+| QHYCFW3-L    7x50mm  | [download]()  | [download]()  | [download]()  | [download]()  |
+| QHYCFW3-XL   9x50mm  | [download]()  | [download]()  | [download]()  | [download]()  |
 
 # Customization
 
