@@ -1,7 +1,7 @@
 # QHYCFW3 Filter Mask 3D Models
 
 
-![QHYCFW3S-US 7x31mm with Separators and Sunken Screw Caps](https://user-images.githubusercontent.com/24981822/134816844-0df083ad-7779-49d9-8e51-ca694955b816.png)
+![QHYCFW3S-US 7x31mm with Separators and Sunkened Screw Caps](https://user-images.githubusercontent.com/24981822/134816844-0df083ad-7779-49d9-8e51-ca694955b816.png)
 
 All, the OpenSCAD script is designed/implemented for generating 3D printable models for QHYCFW3 filter wheel filter masks to make installing unmounted filters much easier. User could change the following parameter (please check with official QHYCCD CFW3 filter wheel drawings: https://www.qhyccd.com/qhycfw3/). The filter covers make filter installation to QHYCFW3 very easy - It helps to center the filters, avoid light leaks and secures the installation. It's a much better solution than the factory M.2 screws + M.2 washers. 
 
@@ -22,16 +22,30 @@ Currently, the following CFW3 filter wheels are supported. The square filter ver
 - QHYCFW3-L    7x50mm
 - QHYCFW3-XL   9x50mm
 
-There are 4 styles with combinations of separators and sunken screw caps. With separator, the user could easily snap the printout into individual filter covers. The sunken screw caps requires better 3D printers. The printer I use from the local library can't really handle it well. So I just use the version without sunken screw caps. 
+There are 4 styles with combinations of separators and sunkened screw caps. With separator, the user could easily snap the printout into individual filter covers. The sunkened screw caps requires better 3D printers. The printer I use from the local library can't really handle it well. So I just use the version without sunkened screw caps. 
 
 ![4 Mask Cover Styles](https://github.com/mxcoppell/qhycfw3-filter-cover/blob/main/image/4-filter-cover-styles.jpeg?raw=true)
 
 Pre-rendered STL files could be downloaded from the following table:
+```
+  S - Separators
+SSC - Sunkened Screw Caps
+```
 
 | Filter Model  | No S / No SSC | No S / Yes SSC | Yes S / No SSC | Yes S / Yes SSC |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-|   |   |
-|   |   |
+| QHYCFW3-S-SR 7x31mm  |   |   |   |   |
+| QHYCFW3-S-SR 6x36mm  |   |   |   |   |
+| QHYCFW3-S-US 7x31mm  |   |   |   |   |
+| QHYCFW3-S-US 6x36mm  |   |   |   |   |
+| QHYCFW3-M-SR 8x31mm  |   |   |   |   |
+| QHYCFW3-M-SR 7x36mm  |   |   |   |   |
+| QHYCFW3-M-SR 5x50mm  |   |   |   |   |
+| QHYCFW3-M-US 8x31mm  |   |   |   |   |
+| QHYCFW3-M-US 7x36mm  |   |   |   |   |
+| QHYCFW3-M-US 5x50mm  |   |   |   |   |
+| QHYCFW3-L    7x50mm  |   |   |   |   |
+| QHYCFW3-XL   9x50mm  |   |   |   |   |
 
 You could also download the OpenSCAD code ([qhycfw3-filter-cover.scad](https://github.com/mxcoppell/qhycfw3-filter-cover/blob/main/openscad/qhycfw3-filter-cover.scad))to do your own customization. 
 
