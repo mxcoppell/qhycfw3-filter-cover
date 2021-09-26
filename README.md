@@ -20,7 +20,13 @@ Currently, the following CFW3 filter wheels are supported. The square filter ver
 - QHYCFW3-L    7x50mm
 - QHYCFW3-XL   9x50mm
 
-The following parameters could be adjusted.
+There are 4 styles of filter covers:
+
+
+
+You could also download the OpenSCAD code (![qhycfw3-filter-cover.scad](https://github.com/mxcoppell/qhycfw3-filter-cover/blob/main/openscad/qhycfw3-filter-cover.scad))to do your own customization. 
+
+The following parameters could be adjusted. (Of course you could change other part of the code to do bug fixes or design modifications.)
 
 ```
 
