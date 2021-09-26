@@ -52,5 +52,8 @@ use_screw_cap_sinks         = false;    //  Use sinks for screw caps,
 cover_slot_shrink_diameter  = 0.45;     //  Diameter shink size for cover slot from QHY slot diameter
 ```
 
-It is suggested to use nozzle size <= 0.35, layer 0.1mm when printing the models.
+It is suggested to use nozzle size <= 0.35, layer 0.1mm when printing the models. When printing, please make sure the following side is facing up (against the the printer bed). 
+
+![Side to face up during printing](https://github.com/mxcoppell/qhycfw3-filter-cover/blob/main/image/print-orientation.jpeg)
+
 
