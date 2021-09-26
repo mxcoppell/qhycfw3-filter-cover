@@ -10,7 +10,7 @@ Please note, this design is for unmounted filters with thickness of 3mm. - For e
 
 Currently, the following CFW3 filter wheels are supported. The square filter version is not available in current version.
 
-- _QHYCFW3-S-SR 7x31mm
+- _QHYCFW3-S-SR 7x31mm_
 - QHYCFW3-S-SR 6x36mm
 - QHYCFW3-S-US 7x31mm
 - QHYCFW3-S-US 6x36mm
