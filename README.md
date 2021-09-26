@@ -92,6 +92,6 @@ It is suggested to use nozzle size <= 0.35, layer 0.1mm when printing the models
 ![Side to face up during printing](https://github.com/mxcoppell/qhycfw3-filter-cover/blob/main/image/print-orientation.jpeg)
 
 
-# license
+# License
 
 GPL - https://www.gnu.org/licenses/gpl-3.0.en.html
