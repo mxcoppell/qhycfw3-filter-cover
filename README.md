@@ -6,6 +6,8 @@ All, the OpenSCAD script is designed/implemented for generating 3D printable mod
 
 Please note, this design is for unmounted filters with thickness of 3mm. - For example, Chroma/Astrodon unmounted 31mm filters, unmounted 50mm round filters and Antlia unmounted 50mm round filters. If the filter thickness is 2mm or below, this solution is not feasible.
 
+I printed mine at a local library, the cost is 30 cents in this highly-inflated world.
+
 # Supported CFW3 Models
 
 Currently, the following CFW3 filter wheels are supported. The square filter version is not available in current version.
