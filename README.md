@@ -1,5 +1,7 @@
 # QHYCFW3 Filter Mask 3D Models
 
+
+![QHYCFW3S-US 7x31mm with Separators and Sunken Screw Caps](https://github.com/mxcoppell/usbrelay/blob/master/images/usbrelay-boards.jpg?raw=true)
 https://github.com/mxcoppell/qhycfw3-filter-cover/blob/main/image/overview.jpeg?raw=true
 
 All, the OpenSCAD script is designed/implemented for generating 3D printable models for QHYCFW3 filter wheel filter masks to make installing unmounted filters much easier. User could change the following parameter (please check with official QHYCCD CFW3 filter wheel drawings: https://www.qhyccd.com/qhycfw3/)
