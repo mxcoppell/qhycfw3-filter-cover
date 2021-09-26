@@ -2,7 +2,52 @@
 
 All, the OpenSCAD script is designed/implemented for generating 3D printable models for QHYCFW3 filter wheel filter masks to make installing unmounted filters much easier. User could change the following parameter (please check with official QHYCCD CFW3 filter wheel drawings: https://www.qhyccd.com/qhycfw3/)
 
+Currently, the following CFW3 filter wheels are supported. The square filter version is not available in current version.
+
+- QHYCFW3-S-SR 7x31mm
+- QHYCFW3-S-SR 6x36mm
+- QHYCFW3-S-US 7x31mm
+- QHYCFW3-S-US 6x36mm
+- QHYCFW3-M-SR 8x31mm
+- QHYCFW3-M-SR 7x36mm
+- QHYCFW3-M-SR 5x50mm
+- QHYCFW3-M-US 8x31mm
+- QHYCFW3-M-US 7x36mm
+- QHYCFW3-M-US 5x50mm
+- QHYCFW3-L    7x50mm
+- QHYCFW3-XL   9x50mm
+
 The following parameters could be adjusted.
 
-Please use nozzle size <= 0.35, layer 0.1mm when printing the models.
+```
+
+//
+//  User customizable data
+//
+cfw_model                   = 2;        //  !!! Please set your CFW model here !!!
+                                        //
+                                        //   0 - QHYCFW3-S-SR 7x31mm
+                                        //   1 - QHYCFW3-S-SR 6x36mm
+                                        //   2 - QHYCFW3-S-US 7x31mm
+                                        //   3 - QHYCFW3-S-US 6x36mm
+                                        //   4 - QHYCFW3-M-SR 8x31mm
+                                        //   5 - QHYCFW3-M-SR 7x36mm
+                                        //   6 - QHYCFW3-M-SR 5x50mm
+                                        //   7 - QHYCFW3-M-US 8x31mm
+                                        //   8 - QHYCFW3-M-US 7x36mm
+                                        //   9 - QHYCFW3-M-US 5x50mm
+                                        //  10 - QHYCFW3-L    7x50mm
+                                        //  11 - QHYCFW3-XL   9x50mm
+
+
+use_filter_slot_separators  = false;    //  Pre-cut into individual filter covers
+                                        //      true - cut | false - don't cut
+
+use_screw_cap_sinks         = false;    //  Use sinks for screw caps, 
+                                        //      true - use | false - don't use
+                                        
+cover_slot_shrink_diameter  = 0.45;     //  Diameter shink size for cover slot from QHY slot diameter
+```
+
+It is suggested to use nozzle size <= 0.35, layer 0.1mm when printing the models.
 
