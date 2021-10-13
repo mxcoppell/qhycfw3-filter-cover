@@ -91,7 +91,7 @@ cover_slot_shrink_diameter  = 0.45;     //  Diameter shink size for cover slot f
 
 # Printing
 
-It is suggested to use nozzle size <= 0.35, layer 0.1mm when printing the models. When printing, please make sure the following side is facing up (against the the printer bed). I am pretty confident any regular 3D printer could handle this job. Either ABS or PETG should be fine along with other fancier filaments. As far as it's flexible and harmless to your precious filter glasses. 
+It is suggested to use nozzle size <= 0.4, layer 0.1mm when printing the models. When printing, please make sure the following side is facing up (against the the printer bed). I am pretty confident any regular 3D printer could handle this job. Either ABS or PETG should be fine along with other fancier filaments. As far as it's flexible and harmless to your precious filter glasses. 
 
 ![Side to face up during printing](https://github.com/mxcoppell/qhycfw3-filter-cover/blob/main/image/print-orientation.jpeg)
 

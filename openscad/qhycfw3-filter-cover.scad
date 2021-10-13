@@ -111,41 +111,41 @@ module screw_hole()
 
 module three_screw_extensions()
 {
-    union() {
+//    union() {
         for (i = [0, 1, 2] ) {
             translate([sin(i * 120 - 60) * qhy_f_screw_center_radius, 
                        cos(i * 120 - 60) * qhy_f_screw_center_radius, 
                        0])
                 rotate([0, 0, (i * 240 - 120) % 360])
-                    screw_extension();
+                    children();
         }
-    }
+//    }
 }
 
 module three_screw_cap_sinks()
 {
     if (use_screw_cap_sinks == true) {
-        union() {
+//        union() {
             for (i = [0, 1, 2] ) {
                 translate([sin(i * 120 - 60) * qhy_f_screw_center_radius, 
                            cos(i * 120 - 60) * qhy_f_screw_center_radius, 
                            0])
-                    screw_cap_sink();
+                    children();
             }
         }
-    }
+//    }
 }
 
 module three_screw_holes()
 {
-    union() {
+//    union() {
         for (i = [0, 1, 2] ) {
             translate([sin(i * 120 - 60) * qhy_f_screw_center_radius, 
                        cos(i * 120 - 60) * qhy_f_screw_center_radius, 
                        0])
-                screw_hole();
+                children();
         }
-    }
+//    }
 }
 
 module filter_window()
@@ -185,16 +185,19 @@ module single_filter_slot()
             difference() { // re-apply screw holes
                 union() {
                     filter_slot_base();
-                    three_screw_extensions();
+                    three_screw_extensions()
+                        screw_extension();
                 }
-                three_screw_holes();
+                three_screw_holes()
+                    screw_hole();
             }
             union() {
                 filter_window();
                 filter_slot_through();
             }
         }
-        three_screw_cap_sinks();
+        three_screw_cap_sinks()
+            screw_cap_sink();
     }
  }
 
@@ -229,6 +232,31 @@ module filter_slots()
     }
 }
 
+module copy_filter_slot(){
+    for (i = [0 : number_of_filters - 1] ) {
+        translate([sin(i*360/number_of_filters)*cfw_center_to_slot_center, 
+                   cos(i*360/number_of_filters)*cfw_center_to_slot_center, 
+                   0]) 
+            rotate([0, 0, -i*360/number_of_filters])
+                children();
+    }
+}
+
+module one_filter_slot()
+{
+    difference() {
+        difference() {
+            // assemble filters
+            single_filter_slot();
+            union() {
+                filter_window();
+                filter_slot_through();
+            }
+        }
+        filter_separators();
+    }
+}
+
 //  generate filter separators
 //
 module filter_separators() {
@@ -243,7 +271,6 @@ module filter_separators() {
 
 
 //  !!! give me the printable !!!
-render() filter_slots();
-
-
-
+//render() filter_slots(); 
+render() copy_filter_slot() //copy
+    one_filter_slot();
