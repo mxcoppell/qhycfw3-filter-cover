@@ -17,7 +17,7 @@ cfw_model                   = 2;        //  !!! Please set your CFW model here !
                                         //  11 - QHYCFW3-XL   9x50mm
 
 
-use_filter_slot_separators  = false;    //  Pre-cut into individual filter covers
+use_filter_slot_separators  =  true;    //  Pre-cut into individual filter covers
                                         //      true - cut | false - don't cut
 
 use_screw_cap_sinks         = false;    //  Use sinks for screw caps, 
@@ -54,26 +54,27 @@ cfw_center_to_slot_center  = cfw_dataset[cfw_model][2];
 // QHY design data
 qhy_f_radius = cfw_filter_slot_diameter / 2;
 qhy_f_screw_pad_radius = 5 / 2;
-qhy_f_screw_sink = 1.5 - 0.2;
+qhy_f_screw_sink = 1.5;
 qhy_f_screw_center_radius = qhy_f_radius + 2;
 qhy_f_screw_radius = 2 / 2 + 0.2; // M2 screw hole
 qhy_f_rise_thickness = 1;
 
 // individual filter mask
 f_radius = qhy_f_radius - cover_slot_shrink_diameter / 2;
-f_slot_cover_size = 1;
-f_slot_wall_thickness = 2;
+f_slot_cover_size = 0.5;
+f_slot_wall_thickness = 1;
 
 f_slot_base_radius = f_radius + f_slot_wall_thickness;
 f_slot_window_radius = f_radius - f_slot_cover_size;
 
 // filter coverage depth from top
-f_slot_cover_depth = 0.6;
-f_slot_window_thickness = 1;
+f_slot_cover_depth = 0.8;
+f_slot_window_thickness = 0.4;
 f_slot_base_thickness = f_slot_cover_depth + f_slot_window_thickness;
 
 // common variables
-extension_thickness = qhy_f_screw_sink + qhy_f_rise_thickness + f_slot_window_thickness-0.3;
+global_fn = 64;
+extension_thickness = qhy_f_screw_sink + qhy_f_rise_thickness + f_slot_window_thickness;
 rise_against_plate = (qhy_f_rise_thickness + f_slot_window_thickness) - (f_slot_window_thickness + f_slot_cover_depth);
 
 module screw_extension()
@@ -81,13 +82,13 @@ module screw_extension()
     translate([0, 0, qhy_f_rise_thickness+f_slot_window_thickness-extension_thickness/2]) {
         difference() {
             union() {
-                translate([0, qhy_f_screw_pad_radius-2/2, 0])
-                    cube([qhy_f_screw_pad_radius*2, qhy_f_screw_pad_radius*2-2, extension_thickness], center=true);
+                translate([0, qhy_f_screw_pad_radius-2.4/2, 0])
+                    cube([qhy_f_screw_pad_radius*2, qhy_f_screw_pad_radius*2-2.4, extension_thickness], center=true);
                 cylinder(h=extension_thickness,
-                    r=qhy_f_screw_pad_radius, center=true, $fn=32);
+                    r=qhy_f_screw_pad_radius, center=true, $fn=global_fn);
             }       
             cylinder(h=extension_thickness,
-                r=qhy_f_screw_radius, center=true, $fn=32);
+                r=qhy_f_screw_radius, center=true, $fn=global_fn);
 
         }
     }
@@ -96,7 +97,7 @@ module screw_extension()
 module screw_cap_sink()
 {
     translate([0, 0, qhy_f_rise_thickness+f_slot_window_thickness-0.5/2]) {
-        cylinder(h=0.5, r=qhy_f_screw_pad_radius+0.1, center=true, $fn=32);
+        cylinder(h=0.5, r=qhy_f_screw_pad_radius+0.1, center=true, $fn=global_fn);
     }
 }
 
@@ -104,7 +105,7 @@ module screw_cap_sink()
 module screw_hole()
 {
     translate([0, 0, qhy_f_rise_thickness+f_slot_window_thickness-extension_thickness/2]) {
-        cylinder(h=extension_thickness, r=qhy_f_screw_radius, center=true, $fn=32);
+        cylinder(h=extension_thickness, r=qhy_f_screw_radius, center=true, $fn=global_fn);
     }
 }
 
@@ -150,26 +151,26 @@ module three_screw_holes()
 module filter_window()
 {
     translate([0, 0, f_slot_window_thickness/2 + f_slot_cover_depth + rise_against_plate])
-        cylinder(h=f_slot_window_thickness, r=f_slot_window_radius, center=true, $fn=100);
+        cylinder(h=f_slot_window_thickness, r=f_slot_window_radius, center=true, $fn=global_fn*2);
 }
 
 module filter_slot()
 {
     translate([0, 0, f_slot_cover_depth/2 + rise_against_plate])
-        cylinder(h=f_slot_cover_depth, r=f_radius, center=true, $fn=100);
+        cylinder(h=f_slot_cover_depth, r=f_radius, center=true, $fn=global_fn*2);
 }
 
 module filter_slot_through()
 {
     translate([0, 0, qhy_f_rise_thickness - (extension_thickness - f_slot_window_thickness + 1)/2])
-        cylinder(h=extension_thickness - f_slot_window_thickness + 1, r=f_radius, center=true, $fn=100);
+        cylinder(h=extension_thickness - f_slot_window_thickness + 1, r=f_radius, center=true, $fn=global_fn*2);
 }
 
 module filter_slot_base()
 {
     difference() {
         translate([0, 0, f_slot_base_thickness/2 + rise_against_plate])
-            cylinder(h=f_slot_base_thickness, r=f_slot_base_radius, center=true, $fn=100);
+            cylinder(h=f_slot_base_thickness, r=f_slot_base_radius, center=true, $fn=global_fn*2);
         union() {
             filter_window();
             filter_slot();
